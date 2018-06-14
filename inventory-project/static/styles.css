@@ -1,0 +1,187 @@
+p {
+	margin: 0;
+}
+
+div {
+	border-color: red;
+}
+
+.header-div {
+	height: 20%;
+	font-size: 18px;
+	padding: 10px 10px 10px 10px;
+	background-color: #F6F6F6;
+	margin-bottom: 10px;
+}
+
+.login-container {
+	text-align: right;
+	
+}
+
+.header-id-container {
+	font-size: 15px;
+	float: right;
+}
+
+.header-pic-container {
+	float: right;
+}
+
+.top-left-title {
+	padding-top:8px;
+}
+
+#google-id-pic {
+	height: 40px;
+	width: 40px;
+}
+
+#btn-logout {
+	font-size: 14px;
+}
+
+#btn-login {
+	font-size: 14px;
+}
+
+.label-modal {
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.menu-items-container {
+	border-width: 1px;
+	border-style:solid;
+	border-color: #CCC;
+	padding: 10px 0 10px 0px;
+}
+
+.menu-item-name {
+	font-size: 16px;
+}
+
+.link-category {
+	padding-left: 10px;
+	cursor: pointer;
+	text-decoration: none;
+	color: #428bca;
+}
+
+.link-category:hover {
+	background-color: #428BCA;
+	color: #FFF;
+}
+
+.menu-item-desc {
+	font-size: 10px;
+}
+
+.item-detail-pane {
+	text-align: center;
+}
+
+.item-name {
+	text-decoration: none;
+	color: #333;
+	cursor: pointer;
+}
+
+.item-name:hover {
+	background-color: #428BCA;
+	color: #FFF;
+}
+
+.latest-items-label {
+	color: #333;
+}
+
+ /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content-details {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    height: 60%;
+}
+
+.modal-content-add {
+	background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    height: 60%;
+}
+
+.modal-content-confirmation {
+	background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+    height: 20%;
+}
+
+#item-img-container {
+	width:100px;
+	height:100px;
+	margin-bottom: 30px;
+	background: url(http://goo.gl/vyAs27) no-repeat scroll 0 0;
+	border: 1px solid #888;
+}
+
+#item-img-modal, #item-img-del{
+	width: 100%
+}
+
+.details-textarea {
+	resize: none;
+}
+
+#item-key-edit, #item-key-del {
+	width: 20px;
+	border: none;
+    background-color: transparent;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+} 
+
+.edit-del-btn-container {
+	text-align: center;
+	width:100%;
+}
+
+.flash-msg-out, .delete-msg-confirmation {
+	color: red;
+	font-size: 12px;
+	font-weight: bold;
+}
