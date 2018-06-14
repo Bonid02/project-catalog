@@ -1,0 +1,11 @@
+{% extends 'catalog.html' %}
+
+{% block content %}
+<div>
+	{% for item in items %}
+		<a>
+			<p class="padding-top item-name">{{item.NAME}}</p>
+		</a>
+	{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+	<body>
+		{% include "header.html" %}
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2 menu-items-container">
+					{% for category in categories %}
+						<div class="link-category" id={{category.ID}}>
+							<p class="padding-top menu-item-name">{{category.NAME}}</p>
+							<p class="padding-bottom menu-item-desc">{{category.DESCRIPTION}}</p>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="col-md-6 item-detail-pane">
+					<div class="flash-msg-container">
+						{% with messages = get_flashed_messages() %}
+							{% if messages %}
+								{% for message in messages %}
+								    <p class="flash-msg-out"> {{ message }} </p>
+								{% endfor %}
+							{% endif %}
+						{% endwith %}
+					</div>
+					<h4 id="category-name-title">{{ category_name }}</h4>
+					<div id="output"></div>
+				</div>
+				<div class="col-md-2 latest-items-pane">
+					<h5 class="latest-items-label">Latest Items Added</h5>
+					<div class="latest-items-container">
+						{% for latest_item in latest_items%}
+							{% if latest_item %}
+								<p class="padding-top latest-item-name">{{latest_item}}</p>
+							{% endif %}
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Modals-->
+		{% include "ro_itemdetails.html" %}
+	</body>
+	<script src="{{url_for('static', filename='js/app.js')}}"></script>
+
+</html>

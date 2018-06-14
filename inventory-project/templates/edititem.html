@@ -1,0 +1,24 @@
+<!--Modal for Editing Item-->
+<div id="item-edit-modal" class="modal">
+	<div class="modal-content-add">
+		<form action="catalog/edit" method = 'post'>
+			<span class="close">&times;</span>
+			<p class="label-modal">Image Url:</p>
+	    		<input id="item-imgurl-edit" type ="text" name="imgurl-edit">
+	    	<p class="label-modal">Name: <input readonly type ="text" id="item-key-edit" name="key-edit"></p>
+	    		<input id="item-name-edit" type ="text" name="name-edit">
+	    	<p class="label-modal">Description:</p>
+	    		<textarea id="item-desc-edit" class="details-textarea" rows="4" cols="50" maxlength="250" name="desc-edit"></textarea>
+	    	<p class="label-modal">Category:</p>
+	    		<select id="select-dropdown-edit" type ="text" name="category-edit">
+	    			{% for category in categories %}
+						<option class="option-cat" value={{category.ID}}>{{category.NAME}}</option>
+					{% endfor %}
+	    		</select>
+	    	<p class="label-modal">Quantity:</p>
+	    		<input id="item-quant-edit" type ="text" name="quantity-edit">
+
+			</br><input id='btn-proceed-edit' class='btn btn-link' type='submit' value='Proceed Edit'>
+		</form>
+	</div>
+</div>

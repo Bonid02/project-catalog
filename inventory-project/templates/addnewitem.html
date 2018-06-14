@@ -1,0 +1,23 @@
+<!--Modal for Adding Item-->
+<div id="item-addnew-modal" class="modal">
+	<div class="modal-content-add">
+		<form id="add-new-form" action="catalog/addnew" method = 'post'>
+			<span class="close">&times;</span>
+			<p class="label-modal">Image Url:</p>
+				<input type ="text" name="imgurl-in">
+			<p class="label-modal">Name:</p>
+				<input type ="text" name="name-in">
+			<p class="label-modal">Description:</p>
+				<textarea class="details-textarea" rows="4" cols="50" maxlength="250" name="desc-in"></textarea>
+			<p class="label-modal">Category:</p>
+				<select id="select-dropdown" type ="text" name="category-in">
+					{% for category in categories %}
+						<option class="option-cat" value={{category.ID}}>{{category.NAME}}</option>
+					{% endfor %}
+				</select>
+			<p class="label-modal">Quantity:</p>
+				<input type ="text" name="quantity-in">
+			</br><input id="button-proceed-add" class="btn btn-link" type="submit" value="Proceed Add New Entry"/>
+		</form>
+	</div>
+</div>

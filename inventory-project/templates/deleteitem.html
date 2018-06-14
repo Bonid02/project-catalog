@@ -1,0 +1,21 @@
+<!--Modal for Delete Item-->
+<div id="item-delete-modal" class="modal">
+	<div class="modal-content-details">
+		<form action="catalog/delete" method = 'post'>
+			<span class="close">&times;</span>
+			<div id=item-img-container>
+				<img id="item-img-del" src="" />
+			</div>
+			<p class="label-modal">Name: <input readonly type ="text" id="item-key-del" name="key-del"></p>
+				<p id="item-name-del">Name of item</p>
+			<p class="label-modal">Description:</p>
+				<p id="item-desc-del">Desc of item</p>
+			<p class="label-modal">Category:</p>
+				<p id="item-cat-del">Category of item</p>
+			<p class="label-modal">Quantity:</p>
+				<p id="item-quant-del">Quantity of item</p>
+			</br><span class="delete-msg-confirmation">Do You Want To Permanently Delete This Item?</span>
+			</br><input id='btn-proceed-del' class='btn btn-link' type='submit' value='Proceed Delete'>
+		</form>
+	</div>
+</div>
